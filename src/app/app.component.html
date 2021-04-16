@@ -327,9 +327,17 @@
 <div class="content" role="main">
 
   <formio src="https://dhnhwgjxyybjuic.form.io/claim"></formio>
-    <!-- <formio src="https://dhnhwgjxyybjuic.form.io/user/register"></formio> -->
+   
 
-
+    <formio src="https://dhnhwgjxyybjuic.form.io/claim"  
+    
+    [submission]="{
+      data: {
+        firstName: '',
+        lastName: '',
+        status: ''
+      }
+    }"></formio>
   </div>
 
 
