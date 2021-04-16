@@ -42,9 +42,12 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    background-color: #44536b;
     color: white;
     font-weight: 600;
+  }
+  .navbar{
+    background-color: #44536b;
   }
 
   .toolbar img {
@@ -296,33 +299,44 @@
     }
   }
 
+  
   @media screen and (max-width: 575px) {
     svg#rocket-smoke {
       display: none;
       visibility: hidden;
     }
   }
+
+  :host >>> .btn-primary{
+    background: #59d05d !important;
+  }
+
 </style>
 
 
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
 
+<!-- <div class="toolbar" role="banner">
+
+  CDR
  
- 
-</div>
+</div> -->
+
+<app-header></app-header>
+
 
 <div class="content" role="main">
 
-    <formio src="https://dhnhwgjxyybjuic.form.io/demographic"></formio>'
+  <formio src="https://dhnhwgjxyybjuic.form.io/claim"></formio>
+    <!-- <formio src="https://dhnhwgjxyybjuic.form.io/user/register"></formio> -->
 
 
   </div>
 
 
-  <footer>
-   
-  </footer>
+
+
+  <app-footer></app-footer>
+ 
 
 
 
