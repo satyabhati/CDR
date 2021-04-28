@@ -1,0 +1,89 @@
+.sub-header {
+    background-color: #555;
+    height: 35px;
+}
+.header-recovery {
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    color: #fff;
+    line-height: 34px;
+}
+.nav-tabs > ul {
+    list-style: none;
+    margin: 3em 0 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .nav-tabs > li {
+    display: inline-block;
+    margin: 0 0.3em;
+  
+  }
+  .nav-tabs .nav-link{
+      border-radius: 0px !important;
+  }
+   .nav-tabs > li a {
+       background: #333;
+      color: #999;
+      display: block;
+      line-height: 1;
+      padding: .95em 3.5em !important;
+      position: relative;
+      text-decoration: none;
+  
+    }
+    .nav-tabs > li a:before, li a:after {
+      content: '';
+      height: 0;
+      position: absolute;
+      right: 100%;
+      top: 0;
+      width: 0;
+    }
+  .nav-tabs > li a:before {
+    border-top-color: transparent ;
+    border-left-color: transparent ;
+  }
+  .nav-tabs > li a:after {
+    border-right-color: transparent ;
+    border-bottom-color: transparent ;
+    left: 100%;
+    right: auto;
+  }
+  .nav-tabs > li a:hover, li a:focus {
+       background: #fff;
+       color: #000;
+       }
+  .nav-tabs > li a:hover:before, li a:hover:after, li a:focus:before, li a:focus:after {
+    border-color: #03a0ed;
+  }
+  .nav-tabs > li a.active {
+     background: #999 !important;
+    cursor: pointer;
+    color: #000 !important;
+      border: solid 1px #999 !important;
+      padding: 1em 3.5em !important;
+  }
+  
+  
+  
+  
+  .nav-tabs > li a.active:before, li a.active:after {
+    border-color: #03a0ed;
+    color:#fff;
+  }
+  
+  .nav-tabs > li a{
+     transform: skewX(25deg);
+    display: inline-block;
+  }
+  
+  .slanted-text{
+      transform: skewX(-25deg);
+        display: inline-block;
+  }
+  .nav-tabs {
+    border-bottom: 1px solid transparent;
+}

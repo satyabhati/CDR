@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormioModule, FormioAppConfig } from 'angular-formio';
 import { AppConfig } from '../config';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './core/components/header/header.component';
+import { FooterComponent } from './core/components/footer/footer.component';
 import { RouterModule } from '@angular/router';
-import { ClaimsComponent } from './components/claims/claims.component';
+import { ClaimsComponent } from './core/components/claims/claims.component';
+import { HttpClientModule } from "@angular/common/http";
+import { NavComponent } from './core/components/nav/nav.component';
+
+
 
 
 @NgModule({
@@ -14,16 +18,16 @@ import { ClaimsComponent } from './components/claims/claims.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ClaimsComponent
+    ClaimsComponent,
+    NavComponent
+ 
   ],
   imports: [
     BrowserModule,
     FormioModule,
+    HttpClientModule,
     RouterModule.forRoot([
-      {
-        path: '',
-        component: ClaimsComponent
-      },
+     
       {
         path: 'claims',
         component: ClaimsComponent

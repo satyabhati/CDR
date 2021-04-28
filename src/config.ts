@@ -1,5 +1,5 @@
 
 export const AppConfig = {
-    appUrl: 'https://dhnhwgjxyybjuic.form.io',
-    apiUrl: 'https://api.form.io'
+    appUrl: 'http://localhost:3001/',
+    apiUrl: 'http://localhost:3001/'
   };
