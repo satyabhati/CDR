@@ -9,6 +9,11 @@ import { RouterModule } from '@angular/router';
 import { ClaimsComponent } from './core/components/claims/claims.component';
 import { HttpClientModule } from "@angular/common/http";
 import { NavComponent } from './core/components/nav/nav.component';
+import { DynamicFormInputComponent } from './dynamic-form-input/dynamic-form-input.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AccountComponent } from './account/account.component';
+
 
 
 
@@ -19,12 +24,16 @@ import { NavComponent } from './core/components/nav/nav.component';
     HeaderComponent,
     FooterComponent,
     ClaimsComponent,
-    NavComponent
+    NavComponent,
+    DynamicFormInputComponent,
+    DynamicFormComponent,
+    AccountComponent
  
   ],
   imports: [
     BrowserModule,
     FormioModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot([
      

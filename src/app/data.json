@@ -1,0 +1,11 @@
+{
+    "data": {
+     "claimid":"1234",
+    "name":"Satyanarayan Bhati",
+    "email":"satyabhati@gmail.com",
+    "status":"inactive",
+    "agree":true,
+    "sex":"Male"
+   }
+ 
+ }

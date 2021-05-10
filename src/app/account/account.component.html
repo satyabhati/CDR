@@ -1,0 +1,46 @@
+<div>
+        <form (ngSubmit)="onSubmit()" [formGroup]="form">
+      
+          <div *ngFor="let formField of formFields" class="form-group">
+            <app-dynamic-form-input [input]="formField" [form]="form"></app-dynamic-form-input>
+          </div>
+      
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-sm" [disabled]="form.invalid">Submit</button>
+            <button  class="btn btn-secondary btn-sm ml-2" (click)="reset()">Reset</button>
+          </div>
+        </form>
+      
+        <div *ngIf="payLoad" class="form-group">
+          <strong>Here's Data</strong><br>{{payLoad}}
+        </div>
+
+
+
+        <button  class="btn-primary" style="text-align:center;margin-bottom:5px;" (click)="getData()">Fetch Data</button>
+        
+             
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Claim ID</th>
+                      <th scope="col"> Name</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Status</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+      
+                    <tr *ngFor="let claim of data">
+                      <td> {{ claim.data.claimId }} </td>
+                      <td> {{ claim.data.name }}</td>
+                      <td> {{ claim.data.email }}</td>
+                      <td> {{ claim.data.status }}</td>
+                     
+                    </tr>
+                    
+                  </tbody>
+                </table>
+</div>

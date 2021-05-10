@@ -4,11 +4,14 @@
 <app-nav></app-nav>
 <div class="container-fluid mt-2">
 
-<div class="content bg-white p-2" role="main">
+<!-- <div class="content bg-white p-2" role="main">
 
-  <!-- <formio src="https://dhnhwgjxyybjuic.form.io/claim"></formio> -->
+ <formio src="https://dhnhwgjxyybjuic.form.io/claim/submission/6078985fb2e64249656ba285" ></formio>
+
+  
    
 
+  <formio src="http://localhost:3001/event/submission/608c0e0ad8be743720b5896b" ></formio> 
 
   <button  class="btn-primary" style="text-align:center;margin-bottom:5px;" (click)="getData()">Fetch Data</button>
   
@@ -20,14 +23,25 @@
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">Status</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
+              
+
               <tr *ngFor="let claim of data">
-                <td> {{ claim.data.claimId }} </td>
+                <td> <input type="text" value="{{ claim.data.claimId }} ">
+                  
+                  
+                  
+
+
+
+                </td>
                 <td> {{ claim.data.firstName }}</td>
                 <td> {{ claim.data.lastName }}</td>
                 <td> {{ claim.data.status }}</td>
+                <td><button type="button"> Edit </button> </td>
               </tr>
               
             </tbody>
@@ -35,12 +49,55 @@
 
 
     
+       
+
+</div> -->
+
+<!-- <div class="content bg-white p-2" role="main">
+    <div class="col-md-6 g-3">
+    <app-dynamic-form [formFields]="formFields | async "></app-dynamic-form>
+  </div>
+
+</div> -->
+
+
+<div class="container bg-white">
+    <div class="col-md-8 offset-md-2 pt-2">
+        <div class="card ">
+          <div class="card-header"> <h6>Account</h6>  </div>
+
+          <div class="card-body">
+              
+              <app-dynamic-form [formFields]="accountFields | async "></app-dynamic-form>
+              
+                        </div>
+
+        </div>
       
+      
+    </div>
 
-</div>
-
-
+    
+  </div>
   
+  <div class="container bg-white">
+      <div class="col-md-8 offset-md-2 pt-2 pb-2">
+          <div class="card ">
+              <div class="card-header"> <h6>Claim</h6>  </div>
+    
+              <div class="card-body">
+                  
+                  <app-account [formFields]="claimFields | async "></app-account>
+                  
+                            </div>
+    
+            </div>
+
+
+      </div>
+  
+      
+    </div>
  
 
         <router-outlet></router-outlet>

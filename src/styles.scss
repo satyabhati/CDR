@@ -23,3 +23,6 @@ body{
     border-top: none;
     border-bottom: none;
 }
+.form-control.ng-invalid {
+    border: 1px solid red ;
+}
